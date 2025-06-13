@@ -15,14 +15,14 @@ const pricing = {
 
 const checkoutLinks = {
   subscribe: {
-    2: 'https://your-shopify-store.com/subscriptions/checkout/product2',
-    4: 'https://your-shopify-store.com/subscriptions/checkout/product4',
-    6: 'https://your-shopify-store.com/subscriptions/checkout/product6'
+    2: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319907041615:1:',
+    4: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908188495:1:',
+    6: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908876623:1:'
   },
   once: {
-    2: 'https://your-shopify-store.com/cart/product2',
-    4: 'https://your-shopify-store.com/cart/product4',
-    6: 'https://your-shopify-store.com/cart/product6'
+    2: 'http://onefixlabs.com/cart/55319907041615:1',
+    4: 'https://www.onefixlabs.com/cart/55319908188495:1',
+    6: 'https://www.onefixlabs.com/cart/55319908876623:1'
   }
 };
 
@@ -42,21 +42,21 @@ const HairGrowthBuyBox = () => {
       });
     }
   };
-
+ 
   return (
     <section id="pricing-section" className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
       <div className="max-w-3xl w-full mx-auto rounded-2xl shadow-2xl bg-gradient-to-br from-slate-100 via-white to-slate-100 border-2 border-slate-200 p-0 md:p-0">
         <div className="px-6 md:px-12 pt-8 pb-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Professional Hair Growth System</h2>
-          <div className="text-lg text-blue-700 mb-4 font-semibold">Special Launch Offer</div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Clinic Results without Clinic Prices</h2>
+          <div className="text-lg text-blue-700 mb-4 font-semibold">Mid-Year Sale Offer</div>
           {/* Product Image */}
           <div className="flex justify-center mb-6">
             <img 
               src="/microneedle-kit.jpg" 
               alt="Hair Growth Microneedle Kit" 
-              className="w-48 h-60 md:w-64 md:h-80 object-contain rounded-xl shadow-lg border-4 border-slate-100 bg-white" 
-              width={256} 
-              height={320} 
+              className="w-80 h-80 md:w-[400px] md:h-[400px] object-cover rounded-2xl shadow-lg" 
+              width={400} 
+              height={400} 
             />
           </div>
           {/* Toggle */}
@@ -89,7 +89,7 @@ const HairGrowthBuyBox = () => {
                   <span className="line-through text-slate-400">$19</span>
                 </li>
                 <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="massager">
-                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-slate-700'}`}>🎁 <span className="font-bold">FREE</span> Massager Brush</span>
+                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-slate-700'}`}>🎁 <span className="font-bold">FREE</span> Scalp Activation Massage Tool</span>
                   <span className="line-through text-slate-400">$29</span>
                 </li>
                 <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="needle">

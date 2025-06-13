@@ -164,103 +164,71 @@ const Page: FC = () => {
       {/* Reviews Section */}
       <section className="w-full flex justify-center bg-white py-4 md:py-16 px-2 md:px-4">
         <div className="max-w-4xl w-full">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">Confidence with Knox</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">Confidence with OneFix Labs</h2>
           <p className="text-center text-gray-600 mb-8">"See how real guys dealing with hair loss are finally getting their confidence — and identity — back. No pills. No fluff. Just results that feel real.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Review 1 */}
-            <div className="bg-emerald-50 rounded-2xl shadow-lg p-4 md:p-6">
-              <div className="flex flex-col md:flex-row gap-4 items-start">
-                <div className="flex-shrink-0">
-                  <Image 
-                    src="/profile1.jpg" 
-                    alt="Daniel C." 
-                    className="w-24 h-24 rounded-xl object-cover shadow-md" 
-                    width={96} 
-                    height={96} 
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="flex gap-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-lg">★</span>
-                    ))}
-                  </div>
-                  <div className="font-bold text-emerald-700 mb-2">"The first time in years I liked my reflection."</div>
-                  <div className="font-semibold text-slate-800 mb-1">- Daniel C.</div>
-                  <div className="text-slate-600">I used to avoid the bathroom mirror. I'd throw on a hoodie just to feel okay. Three weeks into Knox and I actually caught myself fixing my hair instead of hiding it. Might not sound like much — but to me, that was huge.</div>
-                </div>
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image 
+                src="/profile1.jpg" 
+                alt="Daniel C." 
+                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" 
+                width={128} 
+                height={128} 
+              />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"The first time in years I liked my reflection."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Daniel C.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">I used to avoid the bathroom mirror. I'd throw on a hoodie just to feel okay. Three weeks into OneFix Labs and I actually caught myself fixing my hair instead of hiding it. Might not sound like much — but to me, that was huge.</div>
               </div>
             </div>
             {/* Review 2 */}
-            <div className="bg-emerald-50 rounded-2xl shadow-lg p-4 md:p-6">
-              <div className="flex flex-col md:flex-row gap-4 items-start">
-                <div className="flex-shrink-0">
-                  <Image 
-                    src="/profile2.jpg" 
-                    alt="Jason M." 
-                    className="w-24 h-24 rounded-xl object-cover shadow-md" 
-                    width={96} 
-                    height={96} 
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="flex gap-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-lg">★</span>
-                    ))}
-                  </div>
-                  <div className="font-bold text-emerald-700 mb-2">"Finally found something that works."</div>
-                  <div className="font-semibold text-slate-800 mb-1">- Jason M.</div>
-                  <div className="text-slate-600">I tried everything. Serums, shampoos, Reddit "hacks." Nothing lasted. Knox is the first thing that made my scalp feel healthy — like it wasn't fighting me anymore. That alone was a win.</div>
-                </div>
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image 
+                src="/profile2.jpg" 
+                alt="Jason M." 
+                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" 
+                width={128} 
+                height={128} 
+              />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"Finally found something that works."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Jason M.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">I tried everything. Serums, shampoos, Reddit "hacks." Nothing lasted. OneFix Labs is the first thing that made my scalp feel healthy — like it wasn't fighting me anymore. That alone was a win.</div>
               </div>
             </div>
             {/* Review 3 */}
-            <div className="bg-emerald-50 rounded-2xl shadow-lg p-4 md:p-6">
-              <div className="flex flex-col md:flex-row gap-4 items-start">
-                <div className="flex-shrink-0">
-                  <Image 
-                    src="/profile3.jpg" 
-                    alt="Chris R." 
-                    className="w-24 h-24 rounded-xl object-cover shadow-md" 
-                    width={96} 
-                    height={96} 
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="flex gap-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-lg">★</span>
-                    ))}
-                  </div>
-                  <div className="font-bold text-emerald-700 mb-2">"Got my confidence back."</div>
-                  <div className="font-semibold text-slate-800 mb-1">- Chris R.</div>
-                  <div className="text-slate-600">It's not just about regrowth. It's about not thinking about it all day. I wore a hat for five years straight — now I forget I even have one. That's what Knox gave me. Headspace.</div>
-                </div>
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image 
+                src="/profile3.jpg" 
+                alt="Chris R." 
+                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" 
+                width={128} 
+                height={128} 
+              />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"Got my confidence back."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Chris R.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">It's not just about regrowth. It's about not thinking about it all day. I wore a hat for five years straight — now I forget I even have one. That's what OneFix Labs gave me. Headspace.</div>
               </div>
             </div>
             {/* Review 4 */}
-            <div className="bg-emerald-50 rounded-2xl shadow-lg p-4 md:p-6">
-              <div className="flex flex-col md:flex-row gap-4 items-start">
-                <div className="flex-shrink-0">
-                  <Image 
-                    src="/profile4.jpg" 
-                    alt="Eli K." 
-                    className="w-24 h-24 rounded-xl object-cover shadow-md" 
-                    width={96} 
-                    height={96} 
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="flex gap-1 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-lg">★</span>
-                    ))}
-                  </div>
-                  <div className="font-bold text-emerald-700 mb-2">"Finally, real results."</div>
-                  <div className="font-semibold text-slate-800 mb-1">- Eli K.</div>
-                  <div className="text-slate-600">Why does no one talk about this stuff honestly? Everyone just says, "Shave it." But Knox actually made me feel like I had a shot again. Like I wasn't broken — just needed the right fix.</div>
-                </div>
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image 
+                src="/profile4.jpg" 
+                alt="Eli K." 
+                className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" 
+                width={128} 
+                height={128} 
+              />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"Finally, real results."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Eli K.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">Why does no one talk about this stuff honestly? Everyone just says, "Shave it." But OneFix Labs actually made me feel like I had a shot again. Like I wasn't broken — just needed the right fix.</div>
               </div>
             </div>
           </div>
@@ -278,7 +246,7 @@ const Page: FC = () => {
           <div className="flex-1 min-w-0 flex flex-col items-start md:items-start">
             <div className="flex items-center gap-3 mb-2">
               <Image src="/founder-avatar.jpg" alt="Lina founder avatar" className="w-12 h-12 rounded-full object-cover border-2 border-blue-300" width={48} height={48} />
-              <span className="text-lg font-semibold text-blue-700">Hey, I'm Jack — I'm the one who started <span className='text-blue-600 font-bold'>Knox.</span></span>
+              <span className="text-lg font-semibold text-blue-700">Hey, I'm Jack — I'm the one who started <span className='text-blue-600 font-bold'>OneFix Labs.</span></span>
             </div>
             <div className="text-gray-700 mb-4">
             Not because I set out to build a brand… but because I hit a breaking point.<br/><br/>
@@ -304,18 +272,18 @@ const Page: FC = () => {
                         </div>
                       </div>
           {/* Right: Before/After */}
-          <div className="flex-1 min-w-0 flex flex-col items-center justify-center md:items-center">
-            <div className="bg-white rounded-2xl shadow-lg p-4 w-full max-w-xs mx-auto">
-              <Image src="/before-after.jpg" alt="PCOS Hair Transformation" className="rounded-xl w-full object-cover mb-2" width={400} height={300} />
-              <div className="flex justify-between text-xs text-gray-500 mb-1">
+          <div className="flex-1 min-w-0 flex flex-col items-center justify-center md:items-center mt-0">
+            <div className="bg-white rounded-2xl shadow-lg p-2 pt-0 w-full max-w-xs mx-auto flex flex-col items-center">
+              <Image src="/before-after.jpg" alt="My Hair Transformation" className="rounded-xl w-full object-cover mb-2 mt-0" width={400} height={300} />
+              <div className="flex justify-between text-xs text-gray-500 mb-1 w-full px-2">
                 <span>Before<br/>3 months ago</span>
                 <span>After<br/>Today</span>
               </div>
               <div className="text-center text-green-700 font-semibold text-sm">My Hair Transformation</div>
-              <div className="text-center text-gray-500 text-xs">After just 12 weeks using Knox</div>
-                        </div>
-                      </div>
-                    </div>
+              <div className="text-center text-gray-500 text-xs">After just 12 weeks using OneFix Labs</div>
+            </div>
+          </div>
+        </div>
       </section>
       {/* Root Causes Section */}
       <section className="w-full flex flex-col items-center bg-white py-4 md:py-16 px-2 md:px-4">
@@ -365,9 +333,6 @@ const Page: FC = () => {
             Some talked about blocking DHT. Others swore by circulation boosters. One guy said caffeine only works if you also microneedle. Another broke down PGD₂ like it was a villain in a Marvel movie.<br/><br/>
             So after that Reddit comment, I went full rabbit hole mode. PubMed. YouTube derms. Trichology blogs. Forum debates. 2AM deep dives. I became obsessed with one question: What actually helps guys like me?
             </div>
-          </div>
-          <div className="flex-1 flex justify-center">
-            <Image src="/founder-avatar.jpg" alt="Root cause research" className="rounded-2xl shadow-lg w-full max-w-xs object-cover" width={320} height={320} />
           </div>
         </div>
       </section>
@@ -425,25 +390,25 @@ const Page: FC = () => {
             <div className="text-gray-700 mb-4">No one had actually connected the dots. Everything out there felt like guesswork — underdosed, generic, or completely blind to what was really causing hair loss in the first place.</div>
             <div className="text-2xl font-bold text-purple-700 italic mb-2">So I decided to build it myself</div>
             <div className="text-gray-700 mb-4">I partnered with a clinical formulation lab. Spent months buried in research. Talking to dermatologists, trichologists, and endocrinologists. Refining the formula. Scrapping it. Starting over. Again and again. Not because I wanted to launch a brand. Because I needed something that actually worked.</div>
-            <div className="text-gray-700">But a formula alone wasn't enough. If the ingredients can't get past the scalp barrier, they never reach the follicle zone. That's why Knox uses microneedling — not just to deliver deeper, but to wake up blood flow and jumpstart regrowth from the inside out.</div>
+            <div className="text-gray-700">But a formula alone wasn't enough. If the ingredients can't get past the scalp barrier, they never reach the follicle zone. That's why OneFix Labs uses microneedling — not just to deliver deeper, but to wake up blood flow and jumpstart regrowth from the inside out.</div>
           </div>
           {/* Right: Image */}
           <div className="flex-1 flex justify-center items-center">
-            <Image src="/root-cause-.jpg" alt="I got this" className="rounded-xl w-full max-w-xs object-cover" width={320} height={320} />
+            <Image src="/ezgif.com-video-to-gif-converter.gif" alt="I got this" className="rounded-xl w-full h-auto max-w-full md:max-w-2xl object-cover" width={800} height={400} />
           </div>
         </div>
       </section>
-      {/* What Makes Knox Different Section */}
+      {/* What Makes OneFix Labs Different Section */}
       <section className="w-full flex flex-col items-center bg-white py-4 md:py-16 px-2 md:px-4">
         <div className="max-w-4xl w-full">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-purple-900 mb-10">What Makes Knox Different</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-purple-900 mb-10">What Makes OneFix Labs Different</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Not built for the masses */}
             <div className="flex items-start gap-3">
               <span className="text-2xl mt-1">✅</span>
               <div>
                 <div className="font-bold text-gray-900 mb-1">Not built for the "just shave it" crowd</div>
-                <div className="text-gray-600 text-sm">Knox was made for guys who've tried everything — and still can't look in the mirror without flinching.</div>
+                <div className="text-gray-600 text-sm">OneFix Labs was made for guys who've tried everything — and still can't look in the mirror without flinching.</div>
               </div>
             </div>
             {/* Not another gimmick */}
@@ -467,7 +432,7 @@ const Page: FC = () => {
               <span className="text-2xl mt-1">🛠️</span>
               <div>
                 <div className="font-bold text-gray-900 mb-1">Created because nothing else actually fixed it</div>
-                <div className="text-gray-600 text-sm">Knox wasn't born in a boardroom. It was built out of frustration, science, and a refusal to keep wasting time on false promises.</div>
+                <div className="text-gray-600 text-sm">OneFix Labs wasn't born in a boardroom. It was built out of frustration, science, and a refusal to keep wasting time on false promises.</div>
               </div>
             </div>
           </div>
@@ -491,7 +456,7 @@ const Page: FC = () => {
               <span className="text-purple-700 font-extrabold text-lg sm:text-xl md:text-2xl align-middle ml-2">Introducing...</span>
             </div>
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-[3/4] bg-gray-100 rounded-xl flex items-center justify-center mb-2 mx-auto">
-              <Image src="/bottle-placeholder.png" alt="Product bottle" className="w-full h-auto object-contain rounded-xl" width={320} height={400} />
+              <Image src="/bottle-placeholder-onefixlabs.jpg" alt="Product bottle" className="w-full h-auto object-contain rounded-xl" width={320} height={400} />
               <span className="absolute top-3 right-3 bg-pink-200 text-pink-700 text-xs font-bold px-3 py-1 rounded-full shadow">Clinically Tested</span>
             </div>
           </div>
@@ -499,7 +464,7 @@ const Page: FC = () => {
           <div className="flex-1">
             <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Just One Serum + Microneedle, Once a Week</div>
             <div className="text-green-600 font-semibold text-lg mb-2">Target the Real Root Causes of Hair Loss — and Finally See Growth That Lasts</div>
-            <div className="text-gray-700 mb-3">This isn't another shampoo. It's not a placebo spray. It's a system designed to go beneath the surface — where the real damage is happening. Knox works by restoring the broken signals in your scalp: Blocking DHT. Interrupting PGD₂. Recharging blood flow. All delivered through precision microneedling — so it actually gets where it needs to go.</div>
+            <div className="text-gray-700 mb-3">This isn't another shampoo. It's not a placebo spray. It's a system designed to go beneath the surface — where the real damage is happening. OneFix Labs works by restoring the broken signals in your scalp: Blocking DHT. Interrupting PGD₂. Recharging blood flow. All delivered through precision microneedling — so it actually gets where it needs to go.</div>
             <div className="italic text-gray-600 mb-6">Formulated by real people who've lived through the hair loss spiral. Built for those who are still in it — and ready to fight back.</div>
             <button
               className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-full text-lg transition mb-2 flex items-center justify-center gap-2 shadow text-center"
@@ -554,7 +519,7 @@ const Page: FC = () => {
             <div className="bg-green-50 border border-green-200 rounded-xl p-2 md:p-4 relative">
               <span className="absolute top-3 right-3 bg-green-200 text-green-700 text-xs font-bold px-2 py-1 rounded-full">🛠️</span>
               <div className="font-bold text-green-700 mb-1">Made for Hair Loss Sufferers</div>
-              <div className="text-gray-700 text-sm">This isn't for everyone. It's for the ones who were dismissed, mocked, or told "just shave it." Knox was made for us.</div>
+              <div className="text-gray-700 text-sm">This isn't for everyone. It's for the ones who were dismissed, mocked, or told "just shave it." OneFix Labs was made for us.</div>
             </div>
           </div>
           <div className="flex justify-center">
@@ -667,47 +632,47 @@ const Page: FC = () => {
       {/* Real Women Testimonials Section */}
       <section className="w-full flex flex-col items-center bg-green-50 py-4 md:py-16 px-2 md:px-4">
         <div className="max-w-5xl w-full">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-purple-900 mb-10">What Real Hair Loss Sufferers Are Saying After Finding Knox</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-purple-900 mb-10">What Real Hair Loss Sufferers Are Saying After Finding OneFix Labs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Testimonial 1 */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow p-3 md:p-6 gap-4 md:gap-6">
-              <Image src="/profile2.jpg" alt="Layla M." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0" width={128} height={128} />
-              <div className="flex-1">
-                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-lg">★</span>))}</div>
-                <div className="font-bold text-green-600 mb-1 flex items-center gap-2"><span role="img" aria-label="quote">🗣️</span> ""The first time in years I liked my reflection."</div>
-                <div className="font-semibold text-gray-700 mb-1">- Daniel C.</div>
-                <div className="text-gray-600 text-sm">I used to avoid the bathroom mirror. I'd throw on a hoodie just to feel okay. Three weeks into using Knox and I actually caught myself fixing my hair instead of hiding it. Might not sound like much — but to me, that was huge.</div>
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image src="/profile2.jpg" alt="Layla M." className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" width={128} height={128} />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"The first time in years I liked my reflection."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Daniel C.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">I used to avoid the bathroom mirror. I'd throw on a hoodie just to feel okay. Three weeks into using OneFix Labs and I actually caught myself fixing my hair instead of hiding it. Might not sound like much — but to me, that was huge.</div>
               </div>
             </div>
             {/* Testimonial 2 */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow p-3 md:p-6 gap-4 md:gap-6">
-              <div className="flex-1 order-2 md:order-1">
-                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-lg">★</span>))}</div>
-                <div className="font-bold text-green-600 mb-1 flex items-center gap-2"><span role="img" aria-label="quote">🗣️</span> "Finally… something that actually made a difference."</div>
-                <div className="font-semibold text-gray-700 mb-1">- Marcus W.</div>
-                <div className="text-gray-600 text-sm">I've tried every serum, vitamin, and scalp scrub out there. Knox was the first thing that didn't just sit on my scalp. I could feel the difference after microneedling — my scalp felt less tense, and the shedding slowed. I stopped checking my hairline 10 times a day.</div>
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image src="/profile3.jpg" alt="Rina D." className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" width={128} height={128} />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"Finally… something that actually made a difference."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Marcus W.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">I've tried every serum, vitamin, and scalp scrub out there. OneFix Labs was the first thing that didn't just sit on my scalp. I could feel the difference after microneedling — my scalp felt less tense, and the shedding slowed. I stopped checking my hairline 10 times a day.</div>
               </div>
-              <Image src="/profile3.jpg" alt="Rina D." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0 order-1 md:order-2" width={128} height={128} />
             </div>
             {/* Testimonial 3 */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow p-3 md:p-6 gap-4 md:gap-6">
-              <Image src="/profile1.jpg" alt="Samira F." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0" width={128} height={128} />
-              <div className="flex-1">
-                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-lg">★</span>))}</div>
-                <div className="font-bold text-green-600 mb-1 flex items-center gap-2"><span role="img" aria-label="quote">🗣️</span> ""No more hiding under hats."</div>
-                <div className="font-semibold text-gray-700 mb-1">- Victor R.</div>
-                <div className="text-gray-600 text-sm">My girlfriend used to ask why I wore a hat indoors. Truth was — I hated how my hair looked. Knox gave me back that part of myself. Now we take photos without me angling my head or cropping the top off. It's not just my hair — it's my confidence that's growing back.</div>
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image src="/profile1.jpg" alt="Samira F." className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" width={128} height={128} />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"No more hiding under hats."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Victor R.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">My girlfriend used to ask why I wore a hat indoors. Truth was — I hated how my hair looked. OneFix Labs gave me back that part of myself. Now we take photos without me angling my head or cropping the top off. It's not just my hair — it's my confidence that's growing back.</div>
               </div>
             </div>
-            {/* Testimonial 4 (placeholder image) */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow p-3 md:p-6 gap-4 md:gap-6">
-              <div className="flex-1 order-2 md:order-1">
-                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-lg">★</span>))}</div>
-                <div className="font-bold text-green-600 mb-1 flex items-center gap-2"><span role="img" aria-label="quote">🗣️</span> "I didn't even realize how much it was affecting me."</div>
-                <div className="font-semibold text-gray-700 mb-1">- Omar S.</div>
-                <div className="text-gray-600 text-sm">Losing hair was something I tried to ignore. But I didn't realize how much it chipped away at my confidence until I started feeling like myself again. My scalp feels healthier, less irritated, and I'm starting to see growth around my temples. More than that, I'm less anxious about it every day.</div>
+            {/* Testimonial 4 */}
+            <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
+              <Image src="/profile4.jpg" alt="Placeholder" className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" width={128} height={128} />
+              <div className="flex-1 min-w-0">
+                <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-base md:text-lg">★</span>))}</div>
+                <div className="font-bold text-blue-700 mb-1 text-sm md:text-base">"I didn't even realize how much it was affecting me."</div>
+                <div className="font-semibold text-slate-800 mb-0.5 text-xs md:text-sm">- Omar S.</div>
+                <div className="text-slate-600 text-xs md:text-sm leading-snug">Losing hair was something I tried to ignore. But I didn't realize how much it chipped away at my confidence until I started feeling like myself again. My scalp feels healthier, less irritated, and I'm starting to see growth around my temples. More than that, I'm less anxious about it every day.</div>
               </div>
-              <Image src="/profile4.jpg" alt="Placeholder" className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0 order-1 md:order-2" width={128} height={128} />
             </div>
           </div>
         </div>
@@ -718,7 +683,7 @@ const Page: FC = () => {
           <div className="w-full bg-purple-700 rounded-2xl flex flex-row items-center p-3 md:p-8 mb-6">
             {/* Image and badge */}
             <div className="relative w-24 h-24 bg-white/20 rounded-xl flex items-center justify-center mr-6">
-              <Image src="/bottle-placeholder.png" alt="Limited Supply" className="w-16 h-16 object-contain" width={64} height={64} />
+              <Image src="/microneedle-kit.jpg" alt="Limited Supply" className="w-16 h-16 object-contain" width={64} height={64} />
               <span className="absolute top-2 left-2 bg-pink-200 text-pink-700 text-xs font-bold px-2 py-1 rounded-full shadow">Limited Supply</span>
             </div>
             {/* Text */}
@@ -727,7 +692,7 @@ const Page: FC = () => {
                 <span className="text-yellow-300 text-lg">⚠️</span>
                 <span className="font-bold text-lg md:text-xl">June has a high risk of selling out</span>
               </div>
-              <div className="text-white/90 text-sm md:text-base">Knox uses rare, high-quality actives like Apigenin and Saw Palmetto — combined with a precision microneedling system. Each batch is small-run to ensure potency. When it's gone, restocks take time. - If it's in stock, don't wait.</div>
+              <div className="text-white/90 text-sm md:text-base">OneFix Labs uses rare, high-quality actives like Apigenin and Saw Palmetto — combined with a precision microneedling system. Each batch is small-run to ensure potency. When it's gone, restocks take time. - If it's in stock, don't wait.</div>
             </div>
           </div>
           <button
@@ -757,7 +722,7 @@ const Page: FC = () => {
             {/* Problem 2 */}
             <div className="bg-white rounded-xl p-3 md:p-5 shadow flex flex-col items-center text-center">
               <span className="text-3xl mb-2">🧢</span>
-              <div className="font-bold text-purple-800 mb-1">Worrying about odor all day</div>
+              <div className="font-bold text-purple-800 mb-1">Wearing a cap all day</div>
               <div className="text-gray-600 text-sm">Not for fashion. But because you don't want to explain "what happened."</div>
             </div>
             {/* Problem 3 */}
@@ -791,10 +756,10 @@ const Page: FC = () => {
       <section className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
         <div className="max-w-4xl w-full">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
-            Why Why Men with Hair Loss Have Been <span className="text-green-500">LET DOWN</span> For Years…
+            Why Men with Hair Loss Have Been <span className="text-green-500">LET DOWN</span> For Years…
           </h2>
           <div className="flex flex-col md:flex-row gap-8 mb-8 items-center">
-            <Image src="/letdown1.jpg" alt="Body Odor story" className="w-48 h-48 object-cover rounded-xl grayscale" width={192} height={192} />
+            <Image src="/letdown1.jpg" alt="Hairloss" className="w-48 h-48 object-cover rounded-xl grayscale" width={192} height={192} />
             <div className="bg-green-50 rounded-xl p-3 md:p-6 flex-1 text-gray-800 shadow">
               <style jsx>{`
                 .letdown-strong-text { color: #1a1a1a; }
@@ -803,7 +768,7 @@ const Page: FC = () => {
               Doctors shrugged.<br/><br/>
               Drugstore shelves filled with copy-paste shampoos. Forums offered hacks, oils, and sketchy stacks.<br/><br/>
               But none of it actually worked — Because none of it addressed what was really happening beneath the surface.<br/><br/>
-              DHT overload. Blood-starved follicles. Hormonal blockades. Inflammation. That's the real reason hair stops growing — and why Knox was built to fix it.</span>
+              DHT overload. Blood-starved follicles. Hormonal blockades. Inflammation. That's the real reason hair stops growing — and why OneFix Labs was built to fix it.</span>
             </div>
           </div>
           <div className="flex items-center gap-2 mb-2">
@@ -816,7 +781,7 @@ const Page: FC = () => {
             <li className="flex items-center gap-2 mb-1 text-gray-900"><span className="text-green-600">✔</span> <span className="font-bold">PGD₂ hormone buildup</span> — this chemical acts like a "stop sign," blocking hair from re-entering the growth phase.</li>
             <li className="flex items-center gap-2 mb-1 text-gray-900"><span className="text-red-500">✔</span> <span className="font-bold">Low blood flow + inflammation</span> — follicles are starved of oxygen and nutrients, while inflammation slowly destroys the growth environment.</li>
           </ul>
-          <div className="font-bold text-gray-900 mb-8">No shampoo, pill, or placebo can fix that — unless it works at the root. - That's exactly where Knox starts.</div>
+          <div className="font-bold text-gray-900 mb-8">No shampoo, pill, or placebo can fix that — unless it works at the root. - That's exactly where OneFix Labs starts.</div>
           <div className="w-full border-2 border-red-400 bg-red-50 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4 mb-4">
             <span className="text-3xl text-red-500 mr-2">❌</span>
             <div>
@@ -828,6 +793,83 @@ const Page: FC = () => {
           </div>
           </div>
         </section>
+      {/* Comparison Chart Section */}
+      <section className="w-full flex flex-col items-center bg-blue-50 py-8 md:py-16 px-2 md:px-4">
+        <div className="max-w-5xl w-full">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-6">How OneFix Labs Compares to the Alternatives</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-[700px] w-full border-separate border-spacing-y-2">
+              <thead>
+                <tr className="text-left text-xs md:text-sm text-blue-900 font-bold">
+                  <th className="p-2 md:p-3 bg-white rounded-tl-xl">Feature / Solution</th>
+                  <th className="p-2 md:p-3 bg-white text-center">OneFix Labs</th>
+                  <th className="p-2 md:p-3 bg-white text-center">Minoxidil</th>
+                  <th className="p-2 md:p-3 bg-white text-center">Hair Transplant</th>
+                  <th className="p-2 md:p-3 bg-white rounded-tr-xl text-center">Cheap "Snake Oil"</th>
+                </tr>
+              </thead>
+              <tbody className="text-xs md:text-sm">
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Targets Root Cause</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">✅ DHT, PGD₂, inflammation, circulation</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ Only stimulates surface growth</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ Doesn't address follicle health</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ Usually ignores science entirely</td>
+                </tr>
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Penetrates to the Follicle Zone</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">✅ Microneedling delivers deep</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ Sits on scalp</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-blue-700 text-center font-bold">✅ Surgical implantation</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ Mostly superficial application</td>
+                </tr>
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Science-Backed Ingredients</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">✅ Saw Palmetto, Apigenin, Ginseng, etc.</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">⚠️ Limited science behind effect</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-blue-700 text-center font-bold">✅ Yes, but not accessible</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ Buzzwords, no clinical support</td>
+                </tr>
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Non-Invasive & At-Home</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">✅ Easy 5-min weekly treatment</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-blue-700 text-center font-bold">✅ At-home topical</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">❌ Surgery, recovery time</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-blue-700 text-center font-bold">✅ But usually useless</td>
+                </tr>
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Side Effects</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">✅ None reported with OneFix Labs</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">⚠️ Shedding, irritation, dizziness</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">⚠️ Scarring, infection risk</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center font-bold">❓ Often unknown/unregulated</td>
+                </tr>
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Long-Term Scalp Health Support</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">✅ Repairs the growth environment</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ No long-term repair</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">❌ Can fail if scalp is inflamed</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ No support for scalp biology</td>
+                </tr>
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Real Confidence Returns</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">✅ Built to restore identity + results</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">⚠️ Temporary gains, emotional drop</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">⚠️ Cosmetic fix, emotional unknown</td>
+                  <td className="p-2 md:p-3 bg-gray-50 text-gray-500 text-center">❌ Most users report zero change</td>
+                </tr>
+                <tr>
+                  <td className="p-2 md:p-3 bg-white font-semibold text-blue-900">Cost</td>
+                  <td className="p-2 md:p-3 bg-green-50 text-green-700 text-center font-bold">💰 Affordable monthly bundle</td>
+                  <td className="p-2 md:p-3 bg-yellow-50 text-yellow-700 text-center font-bold">💰 Low upfront, long-term recurring</td>
+                  <td className="p-2 md:p-3 bg-red-50 text-red-700 text-center font-bold">💸 Thousands, one-time (or more)</td>
+                  <td className="p-2 md:p-3 bg-red-50 text-red-700 text-center font-bold">💸 Wasteful, adds up fast</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
       {/* Informative Formula Section */}
       <section className="w-full flex flex-col items-center bg-white py-4 md:py-12 px-2 md:px-4">
         <div className="max-w-3xl w-full">
