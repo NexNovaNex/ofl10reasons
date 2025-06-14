@@ -17,8 +17,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "RLS Solutions That Work",
-  description: "Experience the new way of coding with vibedev.ai. Transform your development workflow and vibe with your code like never before.",
+  title: "OneFix Labs",
+  description: "Hair Growth for Men",
   icons: {
     icon: [
       {
