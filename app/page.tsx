@@ -633,8 +633,8 @@ const Page: FC = () => {
       <section className="w-full flex flex-col items-center bg-green-50 py-4 md:py-16 px-2 md:px-4">
         <div className="max-w-5xl w-full">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-purple-900 mb-10">What Real Hair Loss Sufferers Are Saying After Finding OneFix Labs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {/* Testimonial 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Testimonial 1 - updated style */}
             <div className="bg-blue-50 rounded-xl shadow p-2 md:p-4 flex flex-row items-center gap-3 md:gap-6 mb-3">
               <Image src="/profile2.jpg" alt="Layla M." className="w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover bg-white shadow-md flex-shrink-0" width={128} height={128} />
               <div className="flex-1 min-w-0">
@@ -783,9 +783,8 @@ const Page: FC = () => {
           </ul>
           <div className="font-bold text-gray-900 mb-8">No shampoo, pill, or placebo can fix that — unless it works at the root. - That's exactly where OneFix Labs starts.</div>
           <div className="w-full border-2 border-red-400 bg-red-50 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4 mb-4">
-            <span className="text-3xl text-red-500 mr-2">❌</span>
             <div>
-              <div className="font-bold text-gray-900 mb-1 text-lg md:text-xl">But for years, no one built a solution for us.</div>
+              <div className="font-bold text-gray-900 mb-1 text-lg md:text-xl">❌ But for years, no one built a solution for us.</div>
               <div className="text-gray-900 text-sm md:text-base">Most "hair loss treatments" just push growth — without fixing why it stopped in the first place.<br/><br/>Minoxidil? Feels like forcing sprouts from dying soil — and comes with side effects no one talks about.
               <br/><br/>Hair transplants? Expensive. Invasive. And useless if your scalp environment is still toxic.<br/><br/>And the rest?<br/><br/>Serums that sit on the surface. Reddit hacks. Hype without science.<br/><br/>None of it works — because none of it reaches the root.
               </div>
