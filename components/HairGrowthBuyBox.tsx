@@ -15,9 +15,9 @@ const pricing = {
 
 const checkoutLinks = {
   subscribe: {
-    2: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319907041615:1:',
-    4: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908188495:1:',
-    6: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908876623:1:'
+    2: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319907041615:1:689837539663',
+    4: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908188495:1:689837572431',
+    6: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908876623:1:689837605199'
   },
   once: {
     2: 'http://onefixlabs.com/cart/55319907041615:1',
