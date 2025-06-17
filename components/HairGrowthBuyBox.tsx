@@ -7,9 +7,9 @@ const pricing = {
     6: { price: 169, old: 654, percent: 74 }
   },
   once: {
-    2: { price: 109, old: 218, percent: 50 },
-    4: { price: 169, old: 436, percent: 61 },
-    6: { price: 229, old: 654, percent: 65 }
+    2: { price: 89, old: 218, percent: 50 },
+    4: { price: 139, old: 436, percent: 61 },
+    6: { price: 179, old: 654, percent: 65 }
   }
 };
 
