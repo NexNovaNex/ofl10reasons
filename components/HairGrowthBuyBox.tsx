@@ -34,11 +34,20 @@ const HairGrowthBuyBox = () => {
 
   const handleAddToCart = () => {
     if (typeof window !== 'undefined' && window.fbq) {
+      // First pixel
       window.fbq('track', 'AddToCart', {
         value: priceData.price,
         currency: 'USD',
         contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
         content_type: 'product',
+      });
+      // Second pixel
+      window.fbq('track', 'AddToCart', {
+        value: priceData.price,
+        currency: 'USD',
+        contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
+        content_type: 'product',
+        pixelId: '746886027994806',
       });
     }
   };
