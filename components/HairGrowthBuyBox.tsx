@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 const pricing = {
   subscribe: {
+    2: { price: 69, old: 218, percent: 68 },
+    4: { price: 119, old: 436, percent: 73 },
+    6: { price: 159, old: 654, percent: 76 }
+  },
+  once: {
     2: { price: 79, old: 218, percent: 64 },
     4: { price: 129, old: 436, percent: 70 },
     6: { price: 169, old: 654, percent: 74 }
-  },
-  once: {
-    2: { price: 89, old: 218, percent: 50 },
-    4: { price: 139, old: 436, percent: 61 },
-    6: { price: 179, old: 654, percent: 65 }
   }
 };
 
@@ -89,28 +89,28 @@ const HairGrowthBuyBox = () => {
             {/* Features/Benefits Box */}
             <div className="w-full max-w-lg mx-auto mt-2">
               <ul id="benefitsList" className="border-2 border-slate-200 bg-white rounded-xl px-6 py-4 grid grid-cols-1 gap-2 text-base font-medium shadow">
-                <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="discount">
-                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-blue-700 font-bold'}`}>✔ Up to 74% off for life</span>
+                <li className="flex items-center justify-between gap-2" data-benefit="discount">
+                  <span className="flex items-center gap-2 text-blue-700 font-bold">✔ Up to 76% off for life</span>
                   <span className="line-through text-slate-400">$654</span>
                 </li>
-                <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="guide">
-                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-slate-700'}`}>📱 <span className="font-bold">FREE</span> Hair Growth Ebook</span>
+                <li className="flex items-center justify-between gap-2" data-benefit="guide">
+                  <span className="flex items-center gap-2 text-slate-700">📱 <span className="font-bold">FREE</span> Hair Growth Ebook</span>
                   <span className="line-through text-slate-400">$19</span>
                 </li>
-                <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="massager">
-                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-slate-700'}`}>🎁 <span className="font-bold">FREE</span> Scalp Activation Massage Tool</span>
+                <li className="flex items-center justify-between gap-2" data-benefit="massager">
+                  <span className="flex items-center gap-2 text-slate-700">🎁 <span className="font-bold">FREE</span> Scalp Activation Massage Tool</span>
                   <span className="line-through text-slate-400">$29</span>
                 </li>
-                <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="needle">
-                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-slate-700'}`}>💉 <span className="font-bold">FREE</span> Extra Micro Precision Needle</span>
+                <li className="flex items-center justify-between gap-2" data-benefit="needle">
+                  <span className="flex items-center gap-2 text-slate-700">💉 <span className="font-bold">FREE</span> Extra Micro Precision Needle</span>
                   <span className="line-through text-slate-400">$29</span>
                 </li>
-                <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="shipping">
-                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-slate-700'}`}>🚚 <span className="font-bold">FREE</span> Priority Shipping</span>
+                <li className="flex items-center justify-between gap-2" data-benefit="shipping">
+                  <span className="flex items-center gap-2 text-slate-700">🚚 <span className="font-bold">FREE</span> Priority Shipping</span>
                   <span className="line-through text-slate-400">$9</span>
                 </li>
-                <li className={`flex items-center gap-2 ${mode === 'once' ? 'line-through text-slate-400 opacity-60' : ''}`} data-benefit="vip">
-                  <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-slate-400' : 'text-blue-700 font-bold'}`}>✔ VIP Access to Hair Care Specialists</span>
+                <li className="flex items-center gap-2" data-benefit="vip">
+                  <span className="flex items-center gap-2 text-blue-700 font-bold">✔ VIP Access to Hair Care Specialists</span>
                 </li>
               </ul>
             </div>
