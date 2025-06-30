@@ -747,19 +747,19 @@ const Page: FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Step 1 */}
             <div className="flex flex-col items-center bg-gray-50 rounded-2xl shadow-lg p-6">
-              <img src="/step1.gif" alt="Step 1" className="w-full h-56 object-cover rounded-xl mb-4" />
+              <img src="/Step1.gif" alt="Step 1" className="w-full h-56 object-cover rounded-xl mb-4" />
               <div className="text-3xl font-extrabold text-blue-700 mb-2">Step 1</div>
               <div className="text-base text-gray-700 font-semibold mb-2 text-center">Carefully pour the OneFix serum into the microneedle applicator, then securely screw the applicator head on until tight.</div>
             </div>
             {/* Step 2 */}
             <div className="flex flex-col items-center bg-gray-50 rounded-2xl shadow-lg p-6">
-              <img src="/step2.gif" alt="Step 2" className="w-full h-56 object-cover rounded-xl mb-4" />
+              <img src="/Step2.gif" alt="Step 2" className="w-full h-56 object-cover rounded-xl mb-4" />
               <div className="text-3xl font-extrabold text-blue-700 mb-2">Step 2</div>
               <div className="text-base text-gray-700 font-semibold mb-2 text-center">Turn the applicator upside down for 2 minutes to allow the serum to fully absorb into the microneedle head.</div>
             </div>
             {/* Step 3 */}
             <div className="flex flex-col items-center bg-gray-50 rounded-2xl shadow-lg p-6">
-              <img src="/step3.gif" alt="Step 3" className="w-full h-56 object-cover rounded-xl mb-4" />
+              <img src="/Step3.gif" alt="Step 3" className="w-full h-56 object-cover rounded-xl mb-4" />
               <div className="text-3xl font-extrabold text-blue-700 mb-2">Step 3</div>
               <div className="text-base text-gray-700 font-semibold mb-2 text-center">Lightly press and stamp the applicator onto thinning areas, overlapping each section by 50% to maximize serum absorption into the scalp.</div>
             </div>
