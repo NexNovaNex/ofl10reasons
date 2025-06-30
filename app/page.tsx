@@ -239,6 +239,68 @@ const Page: FC = () => {
           </div>
         </div>
       </section>
+      {/* Transformation Section */}
+      <section className="w-full flex justify-center bg-gray-50 py-8 md:py-16 px-2 md:px-4">
+        <div className="max-w-6xl w-full">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
+            Real Transformations from Real People
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Transformation 1 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="relative">
+                <img
+                  src="/Newimage1.jpg"
+                  alt="Transformation 1 - 3 Months"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">
+                  3 Months
+                </div>
+              </div>
+            </div>
+            {/* Transformation 2 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="relative">
+                <img
+                  src="/Newimage2.jpg"
+                  alt="Transformation 2 - 12 Months"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
+                  12 Months
+                </div>
+              </div>
+            </div>
+            {/* Transformation 3 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="relative">
+                <img
+                  src="/Newimage3.jpg"
+                  alt="Transformation 3 - 6 Months"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-2 py-1 rounded">
+                  6 Months
+                </div>
+              </div>
+            </div>
+            {/* Transformation 4 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="relative">
+                <img
+                  src="/Newimage4.jpg"
+                  alt="Transformation 4 - 2 Months"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-2 left-2 bg-orange-600 text-white text-xs px-2 py-1 rounded">
+                  2 Months
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Founder Story Section */}
       <section className="w-full flex justify-center bg-blue-50 py-4 md:py-16 px-2 md:px-4">
         <div className="max-w-5xl w-full flex flex-col md:flex-row gap-10 items-start">
