@@ -89,10 +89,6 @@ const HairGrowthBuyBox = () => {
             {/* Features/Benefits Box */}
             <div className="w-full max-w-lg mx-auto mt-2">
               <ul id="benefitsList" className="border-2 border-slate-200 bg-white rounded-xl px-6 py-4 grid grid-cols-1 gap-2 text-base font-medium shadow">
-                <li className="flex items-center justify-between gap-2" data-benefit="discount">
-                  <span className="flex items-center gap-2 text-blue-700 font-bold">✔ Up to 76% off for life</span>
-                  <span className="line-through text-slate-400">$654</span>
-                </li>
                 <li className="flex items-center justify-between gap-2" data-benefit="guide">
                   <span className="flex items-center gap-2 text-slate-700">📱 <span className="font-bold">FREE</span> Hair Growth Ebook</span>
                   <span className="line-through text-slate-400">$19</span>

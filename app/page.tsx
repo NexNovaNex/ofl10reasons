@@ -95,8 +95,9 @@ const Page: FC = () => {
         <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center gap-8 px-2 md:px-4 pt-0 md:pt-0 pb-6 md:pb-16">
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl order-2 md:order-1">
-            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 text-slate-900">
-            Sick of Watching Your Hairline Fade? <span className="text-slate-900 font-extrabold">The Daily Stress, Mirror Avoidance, and That Gut-Punch Feeling When Nothing Works… Yeah, We've Been There.</span>… We Get It.
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-slate-900">
+              <span className="text-blue-600 font-extrabold">"I Was Still Shedding at 53.</span><br/>
+              <span className="text-slate-900 font-extrabold">And Still Pretending Minoxidil Was Enough."</span>
             </h1>
             <div className="flex items-center gap-2 text-blue-700 font-medium mb-2">
               <span className="text-lg">🧠</span>
@@ -393,7 +394,7 @@ const Page: FC = () => {
             <div className="text-gray-700">
             So after that Reddit comment, I went full rabbit hole mode. PubMed. YouTube derms. Trichology blogs. Forum debates. 2AM deep dives. I became obsessed with one question: What actually helps guys like me?<br/><br/>
             Some talked about blocking DHT. Others swore by circulation boosters. One guy said caffeine only works if you also microneedle. Another broke down PGD₂ like it was a villain in a Marvel movie.<br/><br/>
-            So after that Reddit comment, I went full rabbit hole mode. PubMed. YouTube derms. Trichology blogs. Forum debates. 2AM deep dives. I became obsessed with one question: What actually helps guys like me?
+          
             </div>
           </div>
         </div>
@@ -739,6 +740,32 @@ const Page: FC = () => {
           </div>
         </div>
       </section>
+      {/* How To Section */}
+      <section className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
+        <div className="max-w-5xl w-full">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center text-slate-900 mb-10">3 Simple Steps. One Fix That Actually Works.<span className="text-blue-700"></span></h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center bg-gray-50 rounded-2xl shadow-lg p-6">
+              <img src="/step1.gif" alt="Step 1" className="w-full h-56 object-cover rounded-xl mb-4" />
+              <div className="text-3xl font-extrabold text-blue-700 mb-2">Step 1</div>
+              <div className="text-base text-gray-700 font-semibold mb-2 text-center">Carefully pour the OneFix serum into the microneedle applicator, then securely screw the applicator head on until tight.</div>
+            </div>
+            {/* Step 2 */}
+            <div className="flex flex-col items-center bg-gray-50 rounded-2xl shadow-lg p-6">
+              <img src="/step2.gif" alt="Step 2" className="w-full h-56 object-cover rounded-xl mb-4" />
+              <div className="text-3xl font-extrabold text-blue-700 mb-2">Step 2</div>
+              <div className="text-base text-gray-700 font-semibold mb-2 text-center">Turn the applicator upside down for 2 minutes to allow the serum to fully absorb into the microneedle head.</div>
+            </div>
+            {/* Step 3 */}
+            <div className="flex flex-col items-center bg-gray-50 rounded-2xl shadow-lg p-6">
+              <img src="/step3.gif" alt="Step 3" className="w-full h-56 object-cover rounded-xl mb-4" />
+              <div className="text-3xl font-extrabold text-blue-700 mb-2">Step 3</div>
+              <div className="text-base text-gray-700 font-semibold mb-2 text-center">Lightly press and stamp the applicator onto thinning areas, overlapping each section by 50% to maximize serum absorption into the scalp.</div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Urgency Section */}
       <section className="w-full flex flex-col items-center bg-white py-6 md:py-12 px-2 md:px-4">
         <div className="max-w-3xl w-full flex flex-col items-center">
@@ -752,7 +779,7 @@ const Page: FC = () => {
             <div className="flex-1 text-white">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-yellow-300 text-lg">⚠️</span>
-                <span className="font-bold text-lg md:text-xl">June has a high risk of selling out</span>
+                <span className="font-bold text-lg md:text-xl">July has a high risk of selling out</span>
               </div>
               <div className="text-white/90 text-sm md:text-base">OneFix Labs uses rare, high-quality actives like Apigenin and Saw Palmetto — combined with a precision microneedling system. Each batch is small-run to ensure potency. When it's gone, restocks take time. - If it's in stock, don't wait.</div>
             </div>
