@@ -96,8 +96,8 @@ const Page: FC = () => {
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl order-2 md:order-1">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-slate-900">
-              <span className="text-blue-600 font-extrabold">"I Was Still Shedding at 53.</span><br/>
-              <span className="text-slate-900 font-extrabold">And Still Pretending Minoxidil Was Enough."</span>
+              <span className="text-blue-600 font-extrabold">"I Was Losing Hair and Pretending Minoxidil Was Good Enough.</span><br/>
+              <span className="text-slate-900 font-extrabold">I made the switch to at home microneedling"</span>
             </h1>
             <div className="flex items-center gap-2 text-blue-700 font-medium mb-2">
               <span className="text-lg">🧠</span>
