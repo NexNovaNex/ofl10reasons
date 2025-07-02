@@ -27,10 +27,11 @@ const checkoutLinks = {
 };
 
 const HairGrowthBuyBox = () => {
-  const [mode, setMode] = useState<'subscribe' | 'once'>('once');
+  const [mode, setMode] = useState<'subscribe' | 'once'>('subscribe');
   const [bottles, setBottles] = useState<2 | 4 | 6>(4);
   const priceData = pricing[mode][bottles as 2 | 4 | 6];
   const showSavings = priceData.percent > 0;
+  const [selectedPackage, setSelectedPackage] = useState('4-month');
 
   const handleAddToCart = () => {
     if (typeof window !== 'undefined' && window.fbq) {
