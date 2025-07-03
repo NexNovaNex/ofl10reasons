@@ -30,11 +30,18 @@ const inter = Inter({
   display: 'swap',
 })
 
+// Product page URL for all CTAs
+const productPageUrl = 'https://www.onefixlabs.com/products/onefix%E2%84%A2-advanced-micro-infusion-hair-regrowth-kit?variant=55476048822607';
+
 const Page: FC = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const triggerSectionRef = useRef<HTMLDivElement | null>(null);
 
   // Countdown timer logic
   const [timeLeft, setTimeLeft] = useState(2 * 3600 + 22 * 60 + 33); // 2h 22m 33s in seconds
+
+  // Sticky button state
+  const [showStickyButton, setShowStickyButton] = useState(false);
 
   useEffect(() => {
     if (timeLeft <= 0) return;
@@ -68,6 +75,26 @@ const Page: FC = () => {
     });
 
     return () => observerRef.current?.disconnect();
+  }, []);
+
+  // Sticky button scroll detection
+  useEffect(() => {
+    const stickyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setShowStickyButton(true);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px'
+    });
+
+    if (triggerSectionRef.current) {
+      stickyObserver.observe(triggerSectionRef.current);
+    }
+
+    return () => stickyObserver.disconnect();
   }, []);
 
   useEffect(() => {
@@ -144,9 +171,6 @@ const Page: FC = () => {
               <span className="text-slate-300 font-normal">No more hiding. No more second-guessing. Just you — with your edge back.</span>
             </div>
             <div className="text-xs text-slate-500 mb-4">Backed by real science on scalp biology, hormone control, and follicle recovery.</div>
-            <div className="flex justify-center mb-6">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition w-full md:w-auto" onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}>Start Your Hair Re-growth Journey Today</button>
-            </div>
             <div className="flex flex-wrap gap-4 text-xs text-slate-500 items-center justify-center md:justify-center mt-2">
               <div className="flex items-center gap-1"><span className="text-lg">🧬</span> Science-Based Formula</div>
               <div className="flex items-center gap-1"><span className="text-lg">🌿</span> Powered by Nature</div>
@@ -232,11 +256,6 @@ const Page: FC = () => {
                 <div className="text-slate-600 text-xs md:text-sm leading-snug">Why does no one talk about this stuff honestly? Everyone just says, "Shave it." But OneFix Labs actually made me feel like I had a shot again. Like I wasn't broken — just needed the right fix.</div>
               </div>
             </div>
-          </div>
-          <div className="flex justify-center">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full text-lg transition shadow-lg" onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}>
-              Reclaim Your Confidence
-            </button>
           </div>
         </div>
       </section>
@@ -525,16 +544,18 @@ const Page: FC = () => {
           </div>
           {/* Right: Product Details */}
           <div className="flex-1">
-            <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Just One Serum + Microneedle, Once a Week</div>
+            <div ref={triggerSectionRef} className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Just One Serum + Microneedle, Once a Week</div>
             <div className="text-green-600 font-semibold text-lg mb-2">Target the Real Root Causes of Hair Loss — and Finally See Growth That Lasts</div>
             <div className="text-gray-700 mb-3">This isn't another shampoo. It's not a placebo spray. It's a system designed to go beneath the surface — where the real damage is happening. OneFix Labs works by restoring the broken signals in your scalp: Blocking DHT. Interrupting PGD₂. Recharging blood flow. All delivered through precision microneedling — so it actually gets where it needs to go.</div>
             <div className="italic text-gray-600 mb-6">Formulated by real people who've lived through the hair loss spiral. Built for those who are still in it — and ready to fight back.</div>
-            <button
+            <a
+              href={productPageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-full text-lg transition mb-2 flex items-center justify-center gap-2 shadow text-center"
-              onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
             >
               SUBSCRIBE & SAVE <span>🛒</span>
-            </button>
+            </a>
             <div className="flex gap-6 mt-2">
               <div className="flex items-center gap-2 text-green-600 text-sm"><span>●</span> 60-Day Money Back Guarantee</div>
               <div className="flex items-center gap-2 text-green-600 text-sm"><span>●</span> Free Shipping</div>
@@ -586,7 +607,14 @@ const Page: FC = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition shadow" onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}>RECLAIM YOUR CONFIDENCE</button>
+            <a 
+              href={productPageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition shadow"
+            >
+              RECLAIM YOUR CONFIDENCE
+            </a>
             </div>
           </div>
         </section>
@@ -648,7 +676,14 @@ const Page: FC = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition shadow" onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}>RECLAIM YOUR CONFIDENCE</button>
+            <a 
+              href={productPageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition shadow"
+            >
+              RECLAIM YOUR CONFIDENCE
+            </a>
           </div>
         </div>
       </section>
@@ -784,12 +819,14 @@ const Page: FC = () => {
               <div className="text-white/90 text-sm md:text-base">OneFix Labs uses rare, high-quality actives like Apigenin and Saw Palmetto — combined with a precision microneedling system. Each batch is small-run to ensure potency. When it's gone, restocks take time. - If it's in stock, don't wait.</div>
             </div>
           </div>
-          <button
+          <a
+            href={productPageUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-full text-lg transition mb-2 flex items-center justify-center gap-2 shadow"
-            onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
           >
             UNLOCK YOUR TRUE POWER <span>🛒</span>
-          </button>
+          </a>
           <div className="flex gap-6 mt-2">
             <div className="flex items-center gap-2 text-blue-600 text-sm"><span>●</span> 60-Day Money Back</div>
             <div className="flex items-center gap-2 text-blue-600 text-sm"><span>●</span> Free Shipping</div>
@@ -1015,6 +1052,25 @@ const Page: FC = () => {
           </div>
         </div>
       </footer>
+
+      {/* Sticky Add to Cart Button */}
+      {showStickyButton && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg p-4">
+          <div className="max-w-md mx-auto">
+            <a
+              href={productPageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-full text-lg transition flex items-center justify-center gap-2 shadow-lg"
+            >
+              GET ONEFIX NOW <span>🛒</span>
+            </a>
+            <div className="text-center text-xs text-gray-500 mt-2">
+              90-Day Money Back Guarantee • Free Shipping
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   )
 }

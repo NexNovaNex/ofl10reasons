@@ -13,18 +13,8 @@ const pricing = {
   }
 };
 
-const checkoutLinks = {
-  subscribe: {
-    2: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319907041615:1:689837539663',
-    4: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908188495:1:689837572431',
-    6: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908876623:1:689837605199'
-  },
-  once: {
-    2: 'http://onefixlabs.com/cart/55319907041615:1',
-    4: 'https://www.onefixlabs.com/cart/55319908188495:1',
-    6: 'https://www.onefixlabs.com/cart/55319908876623:1'
-  }
-};
+// Single product page URL for all CTAs
+const productPageUrl = 'https://www.onefixlabs.com/products/onefix%E2%84%A2-advanced-micro-infusion-hair-regrowth-kit?variant=55476048822607';
 
 const HairGrowthBuyBox = () => {
   const [mode, setMode] = useState<'subscribe' | 'once'>('subscribe');
@@ -33,26 +23,6 @@ const HairGrowthBuyBox = () => {
   const showSavings = priceData.percent > 0;
   const [selectedPackage, setSelectedPackage] = useState('4-month');
 
-  const handleAddToCart = () => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      // First pixel
-      window.fbq('track', 'AddToCart', {
-        value: priceData.price,
-        currency: 'USD',
-        contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
-        content_type: 'product',
-      });
-      // Second pixel
-      window.fbq('track', 'AddToCart', {
-        value: priceData.price,
-        currency: 'USD',
-        contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
-        content_type: 'product',
-        pixelId: '746886027994806',
-      });
-    }
-  };
- 
   return (
     <section id="pricing-section" className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
       <div className="max-w-3xl w-full mx-auto rounded-2xl shadow-2xl bg-gradient-to-br from-slate-100 via-white to-slate-100 border-2 border-slate-200 p-0 md:p-0">
@@ -151,10 +121,11 @@ const HairGrowthBuyBox = () => {
           <a
             id="addToCartBtn"
             className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 rounded-full text-xl transition flex items-center justify-center gap-2 shadow-lg mt-2 mb-2"
-            href={checkoutLinks[mode][bottles as 2 | 4 | 6]}
-            onClick={handleAddToCart}
+            href={productPageUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            ADD TO CART - <span id="cartPrice">${priceData.price}</span>
+            GET ONEFIX NOW - <span id="cartPrice">${priceData.price}</span>
           </a>
           {/* Money Back Guarantee */}
           <div className="text-sm text-slate-600 mt-4 flex items-center justify-center gap-2">
