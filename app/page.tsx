@@ -35,7 +35,7 @@ const productPageUrl = 'https://www.onefixlabs.com/products/onefix%E2%84%A2-adva
 
 const reasons = [
   {
-    img: "/2025-02-20-Apigenin.webp",
+    img: "/apigen.jpg",
     title: "1. It's Side-Effect-Free and Non-Hormonal",
     desc: (
       <>
