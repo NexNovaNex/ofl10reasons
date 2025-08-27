@@ -11,7 +11,6 @@ import type { FC } from 'react';
 // Add this TypeScript declaration at the top, after imports
 declare global {
   interface Window {
-    fbq?: (...args: any[]) => void;
     Tally?: {
       loadEmbeds: () => void;
     };
@@ -159,58 +158,25 @@ const Page: FC = () => {
   // Sticky button state
   const [showStickyButton, setShowStickyButton] = useState(false);
 
-  // Buy box state - COMPLETE FRESH REBUILD - FORCE DEPLOYMENT
-  const [mode, setMode] = useState<'subscribe' | 'once'>('subscribe');
+  // Buy box state - Single purchase only
   const [bottles, setBottles] = useState<2 | 4 | 6>(4);
 
   const pricing = {
-    subscribe: {
-      2: { price: 69, old: 218, percent: 68 },
-      4: { price: 119, old: 436, percent: 73 },
-      6: { price: 159, old: 654, percent: 76 }
-    },
-    once: {
-      2: { price: 79, old: 218, percent: 64 },
-      4: { price: 129, old: 436, percent: 70 },
-      6: { price: 169, old: 654, percent: 74 }
-    }
+    2: { price: 69, old: 218, percent: 68 },
+    4: { price: 119, old: 436, percent: 73 },
+    6: { price: 159, old: 654, percent: 76 }
   };
 
   const checkoutLinks = {
-    subscribe: {
-      2: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319907041615:1:689837539663',
-      4: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908188495:1:689837572431',
-      6: 'https://xccj1p-mt.myshopify.com/a/subscriptions/checkout/55319908876623:1:689837605199'
-    },
-    once: {
-      2: 'http://onefixlabs.com/cart/55319907041615:1',
-      4: 'https://www.onefixlabs.com/cart/55319908188495:1',
-      6: 'https://www.onefixlabs.com/cart/55319908876623:1'
-    }
+    2: 'https://www.onefixlabs.com/products/onefix%E2%84%A2-advanced-micro-infusion-hair-regrowth-kit?variant=55476048822607',
+    4: 'https://www.onefixlabs.com/products/onefix%E2%84%A2-advanced-micro-infusion-hair-regrowth-kit?variant=55476048822607',
+    6: 'https://www.onefixlabs.com/products/onefix%E2%84%A2-advanced-micro-infusion-hair-regrowth-kit?variant=55476048822607'
   };
 
-  const priceData = pricing[mode][bottles as 2 | 4 | 6];
+  const priceData = pricing[bottles as 2 | 4 | 6];
   const showSavings = priceData.percent > 0;
 
-  const handleAddToCart = () => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      // First pixel
-      window.fbq('track', 'AddToCart', {
-        value: priceData.price,
-        currency: 'USD',
-        contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
-        content_type: 'product',
-      });
-      // Second pixel
-      window.fbq('track', 'AddToCart', {
-        value: priceData.price,
-        currency: 'USD',
-        contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
-        content_type: 'product',
-        pixelId: '746886027994806',
-      });
-    }
-  };
+
 
   useEffect(() => {
     if (timeLeft <= 0) return;
@@ -526,7 +492,7 @@ const Page: FC = () => {
                             BEFORE & AFTER
                           </div>
                           <Image
-                            src="/EliK.jpg"
+                            src="/elikef.jpg"
                             alt="Eli K. Before and After"
                             width={400}
                             height={200}
@@ -643,51 +609,32 @@ const Page: FC = () => {
                 height={400} 
               />
             </div>
-            {/* Toggle */}
-            <div className="flex flex-col items-center mb-2">
-              <div className="flex items-center gap-2 rounded-full p-1 border-2 border-slate-300 bg-white">
-                <button
-                  id="buyOnceBtn"
-                  className={`buy-toggle px-6 py-2 rounded-full font-bold border-2 transition ${mode === 'once' ? 'bg-slate-800 text-white border-slate-800' : 'bg-slate-100 text-slate-700 border-slate-300'}`}
-                  onClick={() => setMode('once')}
-                >
-                  Buy Once
-                </button>
-                <button
-                  id="subscribeBtn"
-                  className={`buy-toggle px-6 py-2 rounded-full font-bold border-2 transition ${mode === 'subscribe' ? 'bg-blue-700 text-white border-blue-700' : 'bg-slate-100 text-slate-700 border-slate-300'}`}
-                  onClick={() => setMode('subscribe')}
-                >
-                  Subscribe & Save{priceData.percent > 0 ? ` ${priceData.percent}%` : ''}
-                </button>
-              </div>
-              {/* Features/Benefits Box */}
-              <div className="w-full max-w-lg mx-auto mt-2">
-                <ul id="benefitsList" className="border-2 border-slate-200 bg-white rounded-xl px-6 py-4 grid grid-cols-1 gap-2 text-base font-medium shadow">
-                  <li className="flex items-center justify-between gap-2" data-benefit="guide">
-                    <span className="flex items-center gap-2 text-slate-700">📱 <span className="font-bold">FREE</span> Hair Growth Ebook</span>
-                    <span className="line-through text-slate-400">$19</span>
-                  </li>
-                  <li className="flex items-center justify-between gap-2" data-benefit="massager">
-                    <span className="flex items-center gap-2 text-slate-700">🎁 <span className="font-bold">FREE</span> Scalp Activation Massage Tool</span>
-                    <span className="line-through text-slate-400">$29</span>
-                  </li>
-                  <li className="flex items-center justify-between gap-2" data-benefit="needle">
-                    <span className="flex items-center gap-2 text-slate-700">💉 <span className="font-bold">FREE</span> Extra Micro Precision Needle</span>
-                    <span className="line-through text-slate-400">$29</span>
-                  </li>
-                  <li className="flex items-center justify-between gap-2" data-benefit="shipping">
-                    <span className="flex items-center gap-2 text-slate-700">🚚 <span className="font-bold">FREE</span> Priority Shipping</span>
-                    <span className="line-through text-slate-400">$9</span>
-                  </li>
-                  <li className="flex items-center gap-2" data-benefit="vip">
-                    <span className="flex items-center gap-2 text-blue-700 font-bold">✔ VIP Access to Hair Care Specialists</span>
-                  </li>
-                </ul>
-              </div>
+            {/* Features/Benefits Box */}
+            <div className="w-full max-w-lg mx-auto mt-2">
+              <ul id="benefitsList" className="border-2 border-slate-200 bg-white rounded-xl px-6 py-4 grid grid-cols-1 gap-2 text-base font-medium shadow">
+                <li className="flex items-center justify-between gap-2" data-benefit="guide">
+                  <span className="flex items-center gap-2 text-slate-700">📱 <span className="font-bold">FREE</span> Hair Growth Ebook</span>
+                  <span className="line-through text-slate-400">$19</span>
+                </li>
+                <li className="flex items-center justify-between gap-2" data-benefit="massager">
+                  <span className="flex items-center gap-2 text-slate-700">🎁 <span className="font-bold">FREE</span> Scalp Activation Massage Tool</span>
+                  <span className="line-through text-slate-400">$29</span>
+                </li>
+                <li className="flex items-center justify-between gap-2" data-benefit="needle">
+                  <span className="flex items-center gap-2 text-slate-700">💉 <span className="font-bold">FREE</span> Extra Micro Precision Needle</span>
+                  <span className="line-through text-slate-400">$29</span>
+                </li>
+                <li className="flex items-center justify-between gap-2" data-benefit="shipping">
+                  <span className="flex items-center gap-2 text-slate-700">🚚 <span className="font-bold">FREE</span> Priority Shipping</span>
+                  <span className="line-through text-slate-400">$9</span>
+                </li>
+                <li className="flex items-center gap-2" data-benefit="vip">
+                  <span className="flex items-center gap-2 text-blue-700 font-bold">✔ VIP Access to Hair Care Specialists</span>
+                </li>
+              </ul>
             </div>
             {/* Bottle Options */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mb-6">
+            <div className="grid grid-cols-3 gap-3 md:gap-6 mb-6">
               {[2, 4, 6].map((n) => (
                 <div
                   key={n}
@@ -707,8 +654,8 @@ const Page: FC = () => {
                   <div className="mb-2">{n * 30} day supply</div>
                   <div className="flex flex-col items-center">
                     <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl">
-                      <span className="line-through text-slate-400 text-lg mr-1">${pricing[mode][n as 2 | 4 | 6].old}</span>
-                      <span id={`price${n}`}>${pricing[mode][n as 2 | 4 | 6].price}</span>
+                      <span className="line-through text-slate-400 text-lg mr-1">${pricing[n as 2 | 4 | 6].old}</span>
+                      <span id={`price${n}`}>${pricing[n as 2 | 4 | 6].price}</span>
                     </div>
                     <div className="text-xs text-slate-600">Per Pack</div>
                   </div>
@@ -718,15 +665,14 @@ const Page: FC = () => {
             {/* Savings Message */}
             {showSavings && (
               <div id="savingsMsg" className="bg-blue-50 border border-blue-300 rounded-xl px-4 py-2 mb-4 text-blue-700 font-semibold text-center text-base shadow">
-                🎉 Congrats! You're saving <span id="savingsPercent">{priceData.percent}%</span>
+                🎉 Congrats! You're saving <span id="savingsPercent">{priceData.percent}%</span> off retail price
               </div>
             )}
             {/* Add to Cart Button */}
             <a
               id="addToCartBtn"
               className="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 rounded-full text-xl transition flex items-center justify-center gap-2 shadow-lg mt-2 mb-2"
-              href="https://www.onefixlabs.com/products/onefix%E2%84%A2-advanced-micro-infusion-hair-regrowth-set?variant=55598476362063"
-              onClick={handleAddToCart}
+              href={checkoutLinks[bottles as 2 | 4 | 6]}
               target="_blank"
               rel="noopener noreferrer"
             >
